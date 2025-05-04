@@ -24,7 +24,7 @@ public static void main(String[] args) throws Exception {
 				System.out.println("---------------------------------------");
 			     b.insert();}
 			else {
-				System.out.println("Sorry! Tickets were booked");
+				System.out.println("Sorry! Its full");
 				System.out.println("---------------------------------------");
 }
 		

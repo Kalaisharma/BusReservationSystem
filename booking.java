@@ -21,7 +21,7 @@ public class booking {
 		}
 	public  int isavailable()throws SQLException {
 		Connection a=connection.db();
-		PreparedStatement st=a.prepareStatement("select count(name) from booking where date=?;");
+		PreparedStatement st=a.prepareStatement("select count(name) from booking where booking_date=?;");
 		java.sql.Date sqldate=new java.sql.Date(date.getTime());
 		st.setDate(1, sqldate);
 		ResultSet rs=st.executeQuery();
@@ -32,7 +32,7 @@ public class booking {
 	}
 	public int getcapacity() throws SQLException {
 		Connection a=connection.db();
-		PreparedStatement pst=a.prepareStatement("select capacity from bus where busno=?;");
+		PreparedStatement pst=a.prepareStatement("select Bus_capacity from bus where busno=?;");
 		pst.setInt(1, busno);
 		ResultSet rs=pst.executeQuery();
 		rs.next();

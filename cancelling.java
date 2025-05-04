@@ -16,7 +16,7 @@ public class cancelling {
 		java.util.Date date=sdf.parse(a);
 		Connection b=connection.db();
 		java.sql.Date sqldate=new java.sql.Date(date.getTime());
-		PreparedStatement st=b.prepareStatement("delete from booking where name=? and date=?;");
+		PreparedStatement st=b.prepareStatement("delete from booking where name=? and booking_date=?;");
 		st.setString(1, name);
 		st.setDate(2, sqldate);
 		int rows=st.executeUpdate();
